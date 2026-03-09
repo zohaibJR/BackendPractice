@@ -14,6 +14,10 @@ function Home() {
         Add New User
       </button>
 
+      <button onClick={() => navigate("/addplayer")}>
+        Add New Player
+      </button>
+
     </div>
   );
 }

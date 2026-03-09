@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./Config/db.js";
 import userRoutes from "./routes/userRoutes.js";
+import playerRoutes from "./routes/playerRoutes.js";
 
 /* -------------------- CONFIGURATION -------------------- */
 
@@ -27,6 +28,7 @@ app.use(express.json());
 
 // FIX: User API routes
 app.use("/api/users", userRoutes);
+app.use("/api/players", playerRoutes);
 
 // Test route
 app.get("/", (req, res) => {
