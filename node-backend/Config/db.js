@@ -1,13 +1,22 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+
+// FIX: Converted require() → import
+// FIX: Corrected DATABASE_URI spelling
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
-    console.log("MongoDB connected with Help of AI");
+
+    await mongoose.connect(process.env.DATABASE_URI);
+
+    console.log("✅ MongoDB Connected Successfully");
+
   } catch (error) {
-    console.error("MongoDB connection error:", error.message);
+
+    console.error("❌ MongoDB connection error:", error.message);
+
     process.exit(1);
+
   }
 };
 
-module.exports = connectDB;
+export default connectDB; // FIX: module.exports → export default
