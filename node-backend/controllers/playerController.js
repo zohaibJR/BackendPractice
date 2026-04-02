@@ -32,3 +32,20 @@ export const AddPlayer = async (req, res) => {
 
   }
 };
+
+export const GetPakistaniPlayer = async (req, res) => {
+
+    //instead of displaying all players display only those players whose country is pakistan
+    try{
+        const player = await Player.find({ 
+            country: 
+            { $in: ["Pakistan", "India"] } 
+        });
+        return res.status(200).json(player)
+    }
+    catch(error){
+        return res.status(500).json({
+            message: error.message
+        });
+    }
+};

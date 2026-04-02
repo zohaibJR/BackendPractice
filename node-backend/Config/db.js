@@ -1,8 +1,5 @@
 import mongoose from "mongoose";
 
-// FIX: Converted require() → import
-// FIX: Corrected DATABASE_URI spelling
-
 const connectDB = async () => {
   try {
 
@@ -19,4 +16,4 @@ const connectDB = async () => {
   }
 };
 
-export default connectDB; // FIX: module.exports → export default
+export default connectDB; 

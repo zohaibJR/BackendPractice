@@ -9,7 +9,9 @@ function Navbar() {
       <div>
         <Link to="/">Home</Link>
         <Link to="/adduser">Add User</Link>
+        <Link to="/viewusers">View User</Link>
         <Link to="/addplayer">Add Player</Link>
+        
       </div>
 
     </div>

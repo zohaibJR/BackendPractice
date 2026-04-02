@@ -1,9 +1,9 @@
-import express from "express"; // FIX: added quotes
-import { AddUser } from "../controllers/userController.js"; // FIX: added .js extension
+import express from "express";
+import { AddUser, GetAllUsers } from "../controllers/userController.js";
 
 const router = express.Router();
 
-// FIX: POST API for adding user
 router.post("/adduser", AddUser);
+router.get("/getusers", GetAllUsers);
 
 export default router;
